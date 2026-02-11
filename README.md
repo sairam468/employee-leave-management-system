@@ -1,12 +1,14 @@
-# 🏢 Employee Leave Management System
+# 🏢 Employee Leave Management System - REST API
 
 ## 📌 Overview
 
-Employee Leave Management System is an enterprise-grade web application built using Spring Boot and Spring Data JPA to streamline leave request workflows within an organization.
+Employee Leave Management System is a RESTful backend application built using Spring Boot and Spring Data JPA.
 
-The system enables employees to apply for leave and allows administrators to review, approve, or reject requests using a role-based access control mechanism.
+The system provides CRUD-based API endpoints for managing employee leave requests and tracking workflow status.
 
-The application follows a clean layered MVC architecture and demonstrates structured backend development practices.
+All endpoints were tested using Postman.
+
+This project focuses on backend API design, database integration, and layered architecture implementation.
 
 ---
 
@@ -14,96 +16,85 @@ The application follows a clean layered MVC architecture and demonstrates struct
 
 - Java
 - Spring Boot
-- Spring MVC
 - Spring Data JPA (Hibernate)
-- MySQL
-- Thymeleaf
+- MySQL / Oracle
 - Maven
+- Postman (API Testing)
 
 ---
 
-## 👥 System Modules
+## 📂 Core Functionalities
 
-### 👨‍💼 Employee Module
-
-- Secure Login
-- Apply for Leave
-- View Leave History
+- Create Leave Request
+- View Leave Requests
+- Update Leave Status
+- Delete Leave Records
 - Track Leave Status (Pending / Approved / Rejected)
-- Dashboard Overview
-
----
-
-### 🧑‍💼 Admin Module
-
-- Secure Admin Login
-- Approve / Reject Leave Requests
-- Manage Employee Records
-- View Leave Requests Dashboard
-- Workflow Monitoring
 
 ---
 
 ## 🏗 Architecture
 
-The application follows a layered MVC architecture:
+The application follows layered backend architecture:
 
 Controller → Service → Repository → Database
 
-### Benefits:
-- Clear separation of concerns
-- Scalable and maintainable code structure
-- Enterprise-ready design
-- Clean service layer abstraction
-
----
-
-## 🔐 Security Implementation
-
-- Role-Based Access Control (RBAC)
-- Session-based authentication
-- Server-side form validation
-- Secure database interaction via JPA
-- Controlled access to admin endpoints
+Benefits:
+- Clean separation of concerns
+- Structured business logic
+- Scalable backend design
+- Maintainable codebase
 
 ---
 
 ## 🗄 Database Design
 
 - Normalized relational schema
-- Proper entity relationships using JPA annotations
-- Optimized queries for leave tracking
-- Structured workflow state management
+- JPA entity mapping
+- Optimized CRUD operations
+- Efficient repository queries
+
+---
+
+## 📬 API Testing
+
+All REST endpoints were tested using Postman.
+
+Example Endpoints:
+
+- POST   /leaves
+- GET    /leaves
+- GET    /leaves/{id}
+- PUT    /leaves/{id}
+- DELETE /leaves/{id}
 
 ---
 
 ## ⚡ Performance Considerations
 
+- Optimized repository-level queries
 - Reduced redundant database calls
-- Optimized repository queries
-- Clean service-layer abstraction to prevent duplication
-- Efficient session handling
+- Clean service-layer abstraction
 
 ---
 
 ## 🚀 Future Enhancements
 
-- Email notification system for approvals
-- Leave balance auto-calculation
-- Pagination & advanced filtering
-- Dashboard analytics & reporting
-- JWT-based authentication with Spring Security
+- Add Spring Security authentication
+- Implement Role-Based Access Control (RBAC)
+- Integrate JWT authentication
+- Add pagination & filtering
+- Connect frontend UI
 
 ---
 
 ## 🎯 Key Learning Outcomes
 
-- Implemented enterprise workflow management system
-- Applied Role-Based Access Control (RBAC)
-- Designed normalized relational database schema
-- Built layered backend architecture using Spring Boot
-- Integrated Thymeleaf templates with business logic
-- Structured scalable service-repository design
+- Designed RESTful API using Spring Boot
+- Implemented CRUD operations using JPA
+- Structured layered backend architecture
+- Integrated relational database with ORM
+- Tested API endpoints using Postman
 
 ---
 
